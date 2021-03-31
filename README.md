@@ -11,7 +11,7 @@ The workflow is as the following:
         2. More features are *To-Do*
     3. *To-Do* Dimensionality reduction with PCA
     4. Machine learning:
-        1. Naive Bayes
+        1. [Naive Bayes](doc/nb.md)
         2. *To-Do* K-NN
 2. Test
     1. read test images, whose names refer to the correct label
