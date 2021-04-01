@@ -20,12 +20,14 @@ The naïve Bayes assumption assumes that the occurrence of a particular feature 
 * **P(f<sub>i</sub>|c, f<sub>j</sub>) = P(f<sub>i</sub>|c)**
 * => **P(f<sub>1</sub>, .., f<sub>n</sub>|c) = P(f<sub>1</sub>|c) . P(f<sub>2</sub>|c) .. P(f<sub>n</sub>|c) = ∏ P(f<sub>i</sub>|c)**  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _Equation(1)_
 
-Now the problem is simplified to finding P(f<sub>i</sub>|c) of single feature elements f<sub>i</sub>. This can be solved by different ways, like discretization or distribution estimation. One of the simplest ways is to assume a Gaussian distribution, which yields:
+Now the problem is simplified to finding P(f<sub>i</sub>|c) of single feature elements f<sub>i</sub>. This can be solved by different ways, like discretization or distribution estimation. One of the simplest ways is to assume a Gaussian distribution, which yields:  
+* <img src="gaussianEq.png" alt="Gaussian distribution" width="480"/>
 
 This way, the learning algorithm is only about calculating the mean value `µ` and the standard-deviation `σ` for each class `c` and feature dimension `i`.
 
 ### Example:
-Given `m` images, from which we extract 4-dimensional feature vectors, naïve Bayes classifier keeps track of 4 mean and standard-deviation values. This can be depicted as the following:
+Given `m` images, from which we extract 4-dimensional feature vectors, naïve Bayes classifier keeps track of 4 mean and standard-deviation values. This can be depicted as the following:  
+<img src="fvs.png" alt="fvs" width="240"/>
 
 When a new image I<sub>x</sub> arrives to be classified:
 1. it will be represented by its 4-dimensional feature-vector: [f<sub>x,1</sub>  f<sub>x,2</sub>  f<sub>x,3</sub>  f<sub>x,4</sub>]  
